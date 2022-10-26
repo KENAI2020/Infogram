@@ -3,4 +3,10 @@
     <color name="colorPrimary">#2196F3</color>
     <color name="colorPrimaryDark">#1976D2</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="editText_textColorHint">@android:color/background_light</color>
+    <color name="editText_textColorPrimary">@android:color/background_light</color>
+    <color name="editText_colorControlNormal">@color/editText_textColorHint</color>
+    <color name="editText_colorControlActivated">@color/editText_textColorHint</color>
+    <color name="button_textColor">@color/editText_textColorHint</color>
 </resources>
