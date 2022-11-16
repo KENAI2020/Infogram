@@ -2,13 +2,22 @@ package com.example.pruebainfogram.view.fragment;
 
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.example.pruebainfogram.R;
+import com.example.pruebainfogram.adapter.CardViewAdapter;
+import com.example.pruebainfogram.model.Image;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,6 +70,50 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        //toolbar
+        showToolBar(getString(R.string.title_home_fragment), false, view);
+
+        //recyclerView
+        RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
+
+        //Layout manager
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(linearLayoutManager);
+
+        //el adapter
+        CardViewAdapter cardViewAdapter = new CardViewAdapter(buidImages(), R.layout.cardview_image, getActivity());
+        recyclerView.setAdapter(cardViewAdapter);
+
+        return view;
+    }
+
+    public void showToolBar(String titulo, boolean botonSubir, View view){
+        Toolbar toolbar = view.findViewById(R.id.toolbar);
+        ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
+
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(titulo);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(botonSubir);
+    }
+
+    //creamos la lista de imagenes
+    public ArrayList<Image> buidImages(){
+        ArrayList<Image> images = new ArrayList<>();
+
+        images.add(new Image("", "Carlos Valdivia","2 dias", "1 me gusta"));
+        images.add(new Image("", "Luis Peres","4 dias", "3 me gusta"));
+        images.add(new Image("", "Mauricio Quiroz","1 dias", "5 me gusta"));
+        images.add(new Image("", "Danilo Salazar","6 dias", "7 me gusta"));
+        images.add(new Image("", "Daniel Torres","9 dias", "2 me gusta"));
+        images.add(new Image("", "Lorena Herrera","4 dias", "4 me gusta"));
+        images.add(new Image("", "Maria Guzman","7 dias", "6 me gusta"));
+        images.add(new Image("", "Rolando Morales","5 dias", "8 me gusta"));
+        images.add(new Image("", "Fernando Castro","3 dias", "2 me gusta"));
+        images.add(new Image("", "Laura Rojas","1 dias", "3 me gusta"));
+
+
+        return images;
     }
 }
