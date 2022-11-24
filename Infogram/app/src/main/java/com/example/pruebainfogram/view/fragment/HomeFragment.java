@@ -102,16 +102,16 @@ public class HomeFragment extends Fragment {
     public ArrayList<Image> buidImages(){
         ArrayList<Image> images = new ArrayList<>();
 
-        images.add(new Image("", "Carlos Valdivia","2 dias", "1 me gusta"));
-        images.add(new Image("", "Luis Peres","4 dias", "3 me gusta"));
-        images.add(new Image("", "Mauricio Quiroz","1 dias", "5 me gusta"));
-        images.add(new Image("", "Danilo Salazar","6 dias", "7 me gusta"));
-        images.add(new Image("", "Daniel Torres","9 dias", "2 me gusta"));
-        images.add(new Image("", "Lorena Herrera","4 dias", "4 me gusta"));
-        images.add(new Image("", "Maria Guzman","7 dias", "6 me gusta"));
-        images.add(new Image("", "Rolando Morales","5 dias", "8 me gusta"));
-        images.add(new Image("", "Fernando Castro","3 dias", "2 me gusta"));
-        images.add(new Image("", "Laura Rojas","1 dias", "3 me gusta"));
+        images.add(new Image("https://9968c6ef49dc043599a5-e151928c3d69a5a4a2d07a8bf3efa90a.ssl.cf2.rackcdn.com/1130199.jpg", "Carlos Valdivia","2 dias", "1 me gusta"));
+        images.add(new Image("https://landingwebimg.s3.amazonaws.com/uploads/landing_page_product_variant/image/194595/image-upload1606687503.jpeg", "Luis Peres","4 dias", "3 me gusta"));
+        images.add(new Image("https://www.laregion.bo/wp-content/uploads/2019/07/coroico-parapente.jpeg", "Mauricio Quiroz","1 dias", "5 me gusta"));
+        images.add(new Image("https://www.ibolivia.org/wp-content/uploads/2019/08/laguna-colorada-flamencos.jpg", "Danilo Salazar","6 dias", "7 me gusta"));
+        images.add(new Image("https://www.eldiario.net/portal/wp-content/uploads/2021/10/pol-42-15.jpg", "Daniel Torres","9 dias", "2 me gusta"));
+        images.add(new Image("https://miaventuraviajando.com/wp-content/uploads/2018/10/samaipata-mi-aventura-viajando-30.jpg", "Lorena Herrera","4 dias", "4 me gusta"));
+        images.add(new Image("https://www.laregion.bo/wp-content/uploads/2015/10/cristo.jpg", "Maria Guzman","7 dias", "6 me gusta"));
+        images.add(new Image("https://lh5.googleusercontent.com/-CINb2hHdBHc/VMfJjASBQDI/AAAAAAAAC0I/23gSET6uSaw/s640/blogger-image-979580039.jpg", "Rolando Morales","5 dias", "8 me gusta"));
+        images.add(new Image("https://laicismo.org/wp-content/uploads/2017/02/Monumento-Virgen-de-Socavon-en-Oruro-Bolivia.jpg", "Fernando Castro","3 dias", "2 me gusta"));
+        images.add(new Image("https://tipsparatuviaje.com/wp-content/uploads/2019/07/salar-de-uyuni.jpg", "Laura Rojas","1 dias", "3 me gusta"));
 
 
         return images;

@@ -1,5 +1,7 @@
 package com.example.pruebainfogram.adapter;
 
+import static android.os.Build.VERSION_CODES.R;
+
 import android.app.Activity;
 import android.os.Build;
 import android.provider.ContactsContract;
@@ -16,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.pruebainfogram.R;
 import com.example.pruebainfogram.model.Image;
 
+import java.io.ObjectInputStream;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
@@ -24,6 +27,7 @@ public class CardViewAdapter extends RecyclerView.Adapter<CardViewAdapter.CardVi
     private ArrayList<Image> images;
     private int resource;
     private Activity activity;
+
 
     public CardViewAdapter(ArrayList<Image> images, int resource, Activity activity){
         this.images = images;
@@ -45,6 +49,8 @@ public class CardViewAdapter extends RecyclerView.Adapter<CardViewAdapter.CardVi
         Image image = images.get(position);
         //image
 
+
+        Picasso.get().load(image.getUrlImagen()).into(holder.imageCardView);
         holder.usernameCardView.setText(image.getUsernam());
         holder.cantidadDiasCardView.setText(image.getCatidadDias());
         holder.cantidadMegustaCardView.setText(image.getCantidadMeGusta());
