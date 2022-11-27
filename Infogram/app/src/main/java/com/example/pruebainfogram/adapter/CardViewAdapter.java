@@ -3,6 +3,7 @@ package com.example.pruebainfogram.adapter;
 import static android.os.Build.VERSION_CODES.R;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.provider.ContactsContract;
 import android.provider.Telephony;
@@ -17,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.pruebainfogram.R;
 import com.example.pruebainfogram.model.Image;
+import com.example.pruebainfogram.view.ImageDetailActivity;
 
 import java.io.ObjectInputStream;
 import java.lang.reflect.Array;
@@ -54,6 +56,15 @@ public class CardViewAdapter extends RecyclerView.Adapter<CardViewAdapter.CardVi
         holder.usernameCardView.setText(image.getUsernam());
         holder.cantidadDiasCardView.setText(image.getCatidadDias());
         holder.cantidadMegustaCardView.setText(image.getCantidadMeGusta());
+
+        //onclickListener
+        holder.imageCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(activity, ImageDetailActivity.class);
+                activity.startActivity(intent);
+            }
+        });
 
     }
 
